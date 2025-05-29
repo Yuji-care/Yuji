@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    img.logo {
+      max-width: 200px;
+      height: auto;
+    }
+    .content {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .lang-toggle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      cursor: pointer;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!--YUJI-->
+    <img src="logo.png" alt="Company Logo" class="logo" />
+  </header>
+
+  <div class="content">
+    <div class="lang-toggle">
+      <button onclick="showLang('en')">English</button>
+      <button onclick="showLang('jp')">日本語</button>
+    </div>
+
+    <div id="en" class="lang-section">
+      <h1>Welcome to Company Name</h1>
+      <p>Company Name is a trusted leader in the industry, providing high-quality products and services to customers worldwide. Our commitment to excellence ensures customer satisfaction and continuous innovation.</p>
+      <p>Contact us at: info@company.com</p>
+    </div>
+
+    <div id="jp" class="lang-section hidden">
+      <h1>会社名へようこそ</h1>
+      <p>会社名は業界の信頼されるリーダーであり、世界中のお客様に高品質な製品とサービスを提供しています。卓越性への取り組みは、顧客満足と継続的な革新を保証します。</p>
+      <p>お問い合わせ: info@company.com</p>
+    </div>
+  </div>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(lang).classList.remove('hidden');
+    }
+  </script>
+  
+</body>
+</html>
